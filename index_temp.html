@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Generating Manga from Illustrations via Mimicking Manga Creation Workflow</title>
+	<title>User-Guided Line Art Flat Filling with Split Filling Mechanism</title>
 	<link rel="stylesheet" type="text/css" href="./index_files/pixl-bk.css">
 	<link rel="stylesheet" type="text/css" href="./index_files/pixl-fonts.css">
 </head>
@@ -20,43 +20,42 @@
 
 <div class="content">
 <div class="paperheader">
-  <div class="papertitle"> Generating Manga from Illustrations via Mimicking Manga Workflow </div>
+  <div class="papertitle"> User-Guided Line Art Flat Filling with Split Filling Mechanism </div>
   <br>
   <div class="pubinfo"> 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) </div>
   <br>
-  <div class="authors"> <a href="https://github.com/lllyasviel">Lvmin Zhang</a>, <a href="https://github.com/SystemErrorWang">Xinrui Wang</a>, <a href="https://fqnchina.github.io/">Qingnan Fan</a>, Yi Ji, and Chunping Liu </div>
+  <div class="authors"> <a href="https://github.com/lllyasviel">Lvmin Zhang</a>, <a href="https://moeka.me/">Chengze Li</a>, <a href="https://esslab.jp/~ess/en/">Edgar Simo-Serra</a>, Yi Ji, <a href="http://www.cse.cuhk.edu.hk/~ttwong/">Tien-Tsin Wong</a>， and Chunping Liu </div>
 </div>
 
 <div class="paperimg"><img src="./imgs/t.jpg"></div>
-<div class="longcaption">Generating manga from illustrations. Our framework automatically generate the high-quality manga given the illustrations. The colorful images are inputs and the manga images are outputs.</div>
+<div class="longcaption">Split Filling Mechanism (SFM). Given the left line art and some user scribbles, the SFM separate the scribbles into several groups and estimate the influence area of each group to accurately control the colour segmentation. Afterwards, the SFM performs data-driven colourisation in each group to generate visually satisfying colour combinations to assist artists. The outputs are merged together to achieve the right result.</div>
 <div class="header">Abstract</div>
 <p>
 </p><div class="abstract">
-  We present a framework to generate manga from digital illustrations. In professional mange studios, the manga creation workflow consists of three key steps: (1) Artists use line drawings to delineate the structural outlines in manga storyboards. (2) Artists apply several types of regular screentones to render the shading, occlusion, and object materials. (3) Artists selectively paste irregular screen textures onto the canvas to achieve various background layouts or special effects. Motivated by this workflow, we propose a data-driven framework to convert a digital illustration into three corresponding components: manga line drawing, regular screentone, and irregular screen texture. These components can be directly composed into manga images and can be further retouched for more plentiful manga creations. To this end, we create a large-scale dataset with these three components annotated by artists in a human-in-the-loop manner. We conduct both perceptual user study and qualitative evaluation of the generated manga, and observe that our generated image layers for these three components are practically usable in the daily works of manga artists. We provide 60 qualitative results and 15 additional comparisons in the supplementary material. We will make our presented manga dataset publicly available to assist related applications.
+  Flat filling is a critical step in digital artistic content creation with the objective of filling line arts with flat colours. We present a deep learning framework for user-guided line art flat filling that can compute the "influence areas" of the user colour scribbles, i.e., the areas where the user scribbles should propagate and influence. This framework explicitly controls such scribble influence areas for artists to manipulate the colours of image details and avoid colour leakage/contamination between scribbles, and simultaneously, leverages data-driven colour generation to facilitate content creation. This framework is based on a Split Filling Mechanism (SFM), which first splits the user scribbles into individual groups and then independently processes the colours and influence areas of each group with a Convolutional Neural Network (CNN). Learned from more than a million illustrations, the framework can estimate the scribble influence areas in a content-aware manner, and can smartly generate visually pleasing colours to assist the daily works of artists. We show that our proposed framework is easy to use, allowing even amateurs to obtain professional-quality results on a wide variety of line arts.
 </div>
 <div class="header">Files</div>
 <ul>
-<li> <a href="https://github.com/lllyasviel/MangaFilter/releases/download/file/manga.pdf">Paper</a> (27.81MB, a PDF file) </li>
+<li> <a href=" ">Paper</a> - (33.81MB, a PDF file) </li>
+<li> <a href=" ">Video</a> - (59.71MB, a MP4 file) </li>
 </ul>
 <div class="header">See Also</div>
 <ul>
 
-<li> <a href="https://github.com/lllyasviel/MangaFilter/releases/download/file/manga_sup.pdf">Supplementary Document</a> - (101.75MB, a PDF file) A document of additional results and engineering details.</li>
-
-<li> The release of the dataset and code is currently on our to-do list with high priority. </li>
+<li> <a href=" ">Supplementary Document</a> - (74.8MB, a PDF file) A document of additional results and engineering details.</li>
 
 </ul>
 <div class="header">Citation</div>
 <p>
-Lvmin Zhang, Xinrui Wang, Qingnan Fan, Yi Ji, and Chunping Liu.<br>
-"Generating Manga from Illustrations via Mimicking Manga Creation Workflow."<br>
+Lvmin Zhang, Chengze Li, Edgar Simo-Serra, Yi Ji, Tien-Tsin Wong, and Chunping Liu.<br>
+"User-Guided Line Art Flat Filling with Split Filling Mechanism."<br>
 <i>2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, June 2021.
 </p><div class="header">BibTeX</div>
 <p>
-</p><pre>@InProceedings{Manga2021zhang,
-    author={Lvmin Zhang and Xinrui Wang and Qingnan Fan and Yi Ji and Chunping Liu}, 
+</p><pre>@InProceedings{Filling2021zhang,
+    author={Lvmin Zhang and Chengze Li and Edgar Simo-Serra and Yi Ji and Tien-Tsin Wong and Chunping Liu}, 
     booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 
-    title={Generating Manga from Illustrations via Mimicking Manga Creation Workflow}, 
+    title={User-Guided Line Art Flat Filling with Split Filling Mechanism}, 
     year={2021}, 
     }
 </pre>
